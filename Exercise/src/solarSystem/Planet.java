@@ -10,6 +10,7 @@ public class Planet extends OrbitCalculations{
 	private int speed;
 	private double orbitRadius;
 	private int [] centerOrbit = new int[2];
+	private Moon moon = new Moon();
 	
 	
 	public Planet() {
@@ -41,6 +42,14 @@ public class Planet extends OrbitCalculations{
 	
 	public int getSize() {
 		return this.size;
+	}
+	
+	public void setMoon(int size, int orbitRadius, int speed) {
+		this.moon = new Moon(size, orbitRadius, center, speed);
+	}
+	
+	public Moon getMoon() {
+		return this.moon;
 	}
 	
 }

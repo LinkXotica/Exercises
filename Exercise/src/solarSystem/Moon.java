@@ -13,7 +13,7 @@ public class Moon {
 		
 	}
 	
-	public Planet(int size, int orbitRadius, int [] centerOrbit, int speed) {
+	public Moon(int size, int orbitRadius, int [] centerOrbit, int speed) {
 		this.size = size;
 		this.center[0] = centerOrbit[0] + orbitRadius;
 		this.center[1] = centerOrbit[1];
