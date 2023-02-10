@@ -1,8 +1,6 @@
 package solarSystem;
 
-
-
-public class Planet extends OrbitCalculations{
+public class Moon {
 	
 	private int size;
 	private int [] center = new int[2];
@@ -11,8 +9,7 @@ public class Planet extends OrbitCalculations{
 	private double orbitRadius;
 	private int [] centerOrbit = new int[2];
 	
-	
-	public Planet() {
+	public Moon() {
 		
 	}
 	
@@ -43,4 +40,5 @@ public class Planet extends OrbitCalculations{
 		return this.size;
 	}
 	
+
 }
