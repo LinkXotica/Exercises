@@ -2,7 +2,7 @@ package solarSystem;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.util.*;
+
 
 import noApplet.AnimationNoApplet;
 
@@ -14,11 +14,11 @@ public class Sun extends AnimationNoApplet {
 	private int size;
 	private int [] position = new int[2];
 	private int [] center = new int[2];
-	private List<Planet> planets = new ArrayList<>();
-	private Planet mars = new Planet();
-	private Planet mercury = new Planet();
+	//private List<Planet> planets = new ArrayList<>();
+	//private Planet mars = new Planet();
+	//private Planet mercury = new Planet();
 	private Planet earth = new Planet(20, 200, center, 10);
-	private Planet [] pNames = {mars, mercury, earth};
+	//private Planet [] pNames = {mars, mercury, earth};
 	
 	public Sun() {
 		
@@ -35,9 +35,6 @@ public class Sun extends AnimationNoApplet {
 		this.position[1] = positionY - (Math.round(size/2));
 		this.center[0] = positionX; 
 		this.center[1] = positionY;
-		for(int i = 0; i < planetAmount; i++) {
-			planets.add(pNames[i]);
-		}
 		
 	}
 	

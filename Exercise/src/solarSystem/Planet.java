@@ -8,7 +8,7 @@ public class Planet extends OrbitCalculations{
 	private int [] center = new int[2];
 	private int [] position = new int[2];
 	private int speed;
-	private int orbitRadius;
+	private double orbitRadius;
 	private int [] centerOrbit = new int[2];
 	
 	public Planet() {
@@ -23,6 +23,7 @@ public class Planet extends OrbitCalculations{
 		this.position[1] = center[1] - (Math.round(size/2));
 		this.speed = speed;
 		this.centerOrbit = centerOrbit;
+		this.orbitRadius = orbitRadius;
 	}
 	
 	public int [] newPosition(int timer) {
@@ -30,10 +31,9 @@ public class Planet extends OrbitCalculations{
 		double yCycle = Math.sin((timer * speed) * (Math.PI / 180));
 		double xCycle = Math.cos((timer * speed) * (Math.PI / 180));
 		
-		System.out.print(xCycle);
-		
 		this.center[0] = (int) (centerOrbit[0] + (int) (orbitRadius * xCycle));
 		this.center[1] = (int) (centerOrbit[1] + (int) (orbitRadius * yCycle));
+		
 		
 		return this.center;
 	}
