@@ -8,7 +8,7 @@ import javax.swing.Timer;
 import noApplet.NoApplet;
 
 /** Reusable class implementing the animation idiom. */
-@SuppressWarnings("serial")
+@SuppressWarnings({ "serial", "unused" })
 public abstract class AnimationNoApplet extends NoApplet {
     
 	/** Delay in milliseconds between two consecutive frames. */
